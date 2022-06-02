@@ -3,7 +3,7 @@
 use Illuminate\Database\Seeder;
 use Illuminate\Support\Facades\DB;
 
-class RolesTableSeeder extends Seeder
+class DepartmentsTableSeeder extends Seeder
 {
     /**
      * Run the database seeds.
@@ -12,9 +12,9 @@ class RolesTableSeeder extends Seeder
      */
     public function run()
     {
-        DB::table('roles')->insert([
-            'role' => 'admin',
-            'department_id' => '1',
+        DB::table('departments')->insert([
+            'department' => 'admin',
+            'description' => 'This is Admin Department',
         ]);
     }
 }

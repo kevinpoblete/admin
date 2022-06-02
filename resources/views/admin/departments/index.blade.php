@@ -8,16 +8,16 @@
                 <div class="card-header">Dashboard</div>
 
                 <div class="card-body">
-                    @foreach ($roles as $role)
+                    @foreach ($departments as $department)
                         <div class="row">
                             <div class="col-md-9">
-                                <a href="{{ route('admin.role.show', [$role->id]) }}">{{ $role->role }}</a>
+                                <a href="{{ route('admin.department.show', [$department->id]) }}">{{ $department->department }}</a>
                             </div>
                             <div class="col-md-1">
-                                <a href="{{ route('admin.role.edit', [$role->id]) }}" class="btn btn-warning">Edit</a>
+                                <a href="{{ route('admin.department.edit', [$department->id]) }}" class="btn btn-warning">Edit</a>
                             </div>
                             <div class="col-md-1">
-                                <form action="{{ route('admin.role.destroy', [$role->id]) }}" method="POST">
+                                <form action="{{ route('admin.department.destroy', [$department->id]) }}" method="POST">
                                     @method('DELETE')
                                     @csrf
                                     <button type="submit" class="btn btn-danger">Delete</button>
@@ -25,7 +25,7 @@
                             </div>
                         </div>
                     @endforeach
-                    <a href="{{ route('admin.role.create') }}" class="btn btn-primary">Add Role</a>
+                    <a href="{{ route('admin.department.create') }}" class="btn btn-primary">Add department</a>
                 </div>
             </div>
         </div>

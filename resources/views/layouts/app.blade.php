@@ -55,8 +55,9 @@
                                 </a>
 
                                 <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
-                                    <a class="dropdown-item" href="{{ route('admin.role.index') }}">Roles</a>
                                     <a class="dropdown-item" href="{{ route('admin.user.index') }}">Users</a>
+                                    <a class="dropdown-item" href="{{ route('admin.role.index') }}">Roles</a>
+                                    <a class="dropdown-item" href="{{ route('admin.department.index') }}">Departments</a>
                                     
                                     <a class="dropdown-item" href="{{ route('logout') }}"
                                        onclick="event.preventDefault();
